@@ -2,6 +2,43 @@
 
 @implementation ReanimatedSensor
 
+#if TARGET_OS_TV
+
+- (instancetype)init:(ReanimatedSensorType)sensorType interval:(int)interval setter:(void (^)(double[]))setter
+{
+  self = [super init];
+  return self;
+}
+- (bool)initialize
+{
+  return true;
+}
+- (bool)initializeGyroscope
+{
+  return true;
+}
+- (bool)initializeAccelerometer
+{
+  return true;
+}
+- (bool)initializeGravity
+{
+  return true;
+}
+- (bool)initializeMagnetometer
+{
+  return true;
+}
+- (bool)initializeOrientation
+{
+  return true;
+}
+- (void)cancel
+{
+}
+
+#else
+
 - (instancetype)init:(ReanimatedSensorType)sensorType interval:(int)interval setter:(void (^)(double[]))setter
 {
   self = [super init];
@@ -165,5 +202,7 @@
     [_motionManager stopDeviceMotionUpdates];
   }
 }
+
+#endif // TARGET_OS_TV
 
 @end

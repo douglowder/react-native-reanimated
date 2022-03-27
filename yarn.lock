@@ -8524,10 +8524,9 @@ react-native-screens@^3.11.1:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
 
-react-native@0.68.0-rc.2:
-  version "0.68.0-rc.2"
-  resolved "https://registry.npmjs.org/react-native/-/react-native-0.68.0-rc.2.tgz"
-  integrity sha512-PdaPs+g5DCZdWTFScZ42nv6m+iTvLSo34efxDiWBwrkU7kr6M9WjNSnPhd07KAOxHWBOQKZgV0UwwlN2ugvqtw==
+"react-native@file:../../rntv68.tgz":
+  version "0.68.0-0"
+  resolved "file:../../rntv68.tgz#7611f5fec678c2bed87add3516e9f5400879f16f"
   dependencies:
     "@jest/create-cache-key-function" "^27.0.1"
     "@react-native-community/cli" "^7.0.3"
@@ -8550,6 +8549,7 @@ react-native@0.68.0-rc.2:
     nullthrows "^1.1.1"
     pretty-format "^26.5.2"
     promise "^8.0.3"
+    prop-types "^15.7.2"
     react-devtools-core "^4.23.0"
     react-native-codegen "^0.0.13"
     react-native-gradle-plugin "^0.0.5"

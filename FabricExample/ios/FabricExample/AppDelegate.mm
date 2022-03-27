@@ -45,11 +45,15 @@
 
   UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"FabricExample", nil);
 
+#if TARGET_OS_TV
+  rootView.backgroundColor = [UIColor whiteColor];
+#else
   if (@available(iOS 13.0, *)) {
     rootView.backgroundColor = [UIColor systemBackgroundColor];
   } else {
     rootView.backgroundColor = [UIColor whiteColor];
   }
+#endif
 
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];

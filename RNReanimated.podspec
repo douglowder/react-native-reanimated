@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   s.dependency 'React-Core'
   s.dependency 'React-CoreModules'
   s.dependency 'React-Core/DevSupport'
-  s.dependency 'React-RCTActionSheet'
+  # s.dependency 'React-RCTActionSheet'
   s.dependency 'React-RCTNetwork'
   s.dependency 'React-RCTAnimation'
   s.dependency 'React-RCTLinking'
