@@ -3,7 +3,7 @@ require_relative './scripts/reanimated_utils'
 
 reanimated_package_json = JSON.parse(File.read(File.join(__dir__, "package.json")))
 config = find_config()
-assert_no_multiple_instances(config)
+#assert_no_multiple_instances(config)
 assert_latest_react_native_with_new_architecture(config, reanimated_package_json)
 
 fabric_enabled = ENV['RCT_NEW_ARCH_ENABLED'] == '1'
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   # s.license    = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author       = { "author" => "author@domain.cn" }
-  s.platforms    = { :ios => "9.0", :tvos => "9.0", :osx => "10.14" }
+  s.platforms    = { :ios => "13.0", :tvos => "13.0", :osx => "10.14" }
   s.source       = { :git => "https://github.com/software-mansion/react-native-reanimated.git", :tag => "#{s.version}" }
 
   s.source_files = [

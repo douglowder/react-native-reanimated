@@ -1,0 +1,29 @@
+diff --git a/node_modules/react-native-pager-view/ios/ReactNativePageView.m b/node_modules/react-native-pager-view/ios/ReactNativePageView.m
+index 9f8ed5b..a081e5e 100644
+--- a/node_modules/react-native-pager-view/ios/ReactNativePageView.m
++++ b/node_modules/react-native-pager-view/ios/ReactNativePageView.m
+@@ -90,9 +90,11 @@
+         [self setupInitialController];
+     }
+ 
++#if !TARGET_OS_TV
+     if (self.reactViewController.navigationController != nil && self.reactViewController.navigationController.interactivePopGestureRecognizer != nil) {
+         [self.scrollView.panGestureRecognizer requireGestureRecognizerToFail:self.reactViewController.navigationController.interactivePopGestureRecognizer];
+     }
++#endif
+ }
+ 
+ - (void)embed {
+diff --git a/node_modules/react-native-pager-view/react-native-pager-view.podspec b/node_modules/react-native-pager-view/react-native-pager-view.podspec
+index 1ae49ce..fd190df 100644
+--- a/node_modules/react-native-pager-view/react-native-pager-view.podspec
++++ b/node_modules/react-native-pager-view/react-native-pager-view.podspec
+@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
+   s.license      = package["license"]
+   s.authors      = package["author"]
+ 
+-  s.platforms    = { :ios => "10.0" }
++  s.platforms    = { :ios => "12.4", :tvos => "12.4" }
+   s.source       = { :git => "https://github.com/callstack/react-native-pager-view.git", :tag => "#{s.version}" }
+ 
+   s.source_files = "ios/**/*.{h,m,mm,swift}"
